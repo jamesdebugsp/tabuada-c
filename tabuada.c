@@ -1,27 +1,22 @@
 #include <stdio.h>
+#include <conio.h>
 
-int main()
-{
-    double largura, comprimento, valor, area, preco;
+int main() {
+    int numero;
 
-    printf("Digite a largura do terreno: ");
-    scanf("%lf", &largura);
 
-    printf("Digite o comprimento do terreno: ");
-    scanf("%lf", &comprimento);
+    printf("Digite um numero para ver sua tabuada: ");
+    scanf("%d", &numero);
 
-    printf("Digite o valor do metro quadrado: ");
-    scanf("%lf", &valor);
 
-    area = largura * comprimento;
-    preco = area * valor;
+    printf("Tabuada do %d:\n", numero);
+    for (int i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", numero, i, numero * i);
+    }
 
-    printf("Area do terreno = %.2lf\n", area);
-    printf("Preco do terreno = %.2lf\n", preco);
 
-    getchar(); // lê o '\n' que ficou no buffer
-    getchar(); // espera você apertar uma tecla antes de fechar
+    printf("Pressione qualquer tecla para sair...");
+    getche();
 
     return 0;
 }
-
